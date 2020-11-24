@@ -14,3 +14,22 @@ fn (x &CoreUtils) install() {
 	system('./configure $args')
 	system('make install')
 }
+
+/*
+fn install_coreutils() {
+	app.init(
+		name: 'coreutils'
+		mod: .coreutils
+		depends_on: [.autoconf, .automake]
+		url: 'https://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz'
+	)
+
+	download_and_extract(x.url(), x.name())
+	// if x.is_head() {
+	// system('./bootstrap')
+	// }
+	args := '--prefix=$prefix --program-prefix=g --without-gmp'
+	system('./configure $args')
+	system('make install')
+}
+*/
